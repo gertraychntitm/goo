@@ -68,6 +68,7 @@ sysctl -p
 wget --no-check-certificate https://raw.githubusercontent.com/gertraychntitm/goo/master/go.sh -O ~/go.sh
 bash ~/go.sh
 
+sed -i '11 a User=nobody' /etc/systemd/system/v2ray.service
 sed -i '11 a LimitAS=infinity' /etc/systemd/system/v2ray.service
 sed -i '11 a LimitCPU=infinity' /etc/systemd/system/v2ray.service
 sed -i '11 a LimitFSIZE=infinity' /etc/systemd/system/v2ray.service
